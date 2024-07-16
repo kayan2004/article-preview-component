@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+body {
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+  width: min-content;
+  border-radius: 10px;
+  background-color: white;
+}
+.image_container {
+  display: block;
+  border-radius: 10px 10px 0 0;
+  height: 204px;
+  width: 310px;
+  overflow: hidden;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.text {
+  display: flex;
+
+  flex-direction: column;
+}
+h1 {
+  font-weight: 700;
+  margin: 20px;
+  font-size: 17px;
+}
+p {
+  margin: 0 20px 20px 20px;
+  font-weight: 500;
+  color: rgb(0, 0, 0, 60%);
+}
+.profile {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 0 20px 20px 20px;
+}
+.profile img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+.name {
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.date {
+  color: rgb(0, 0, 0, 50%);
+}
+
+.svg_container.show {
+  border: none;
+  margin-left: 55px;
+  background-color: hsl(210, 46%, 95%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.links {
+  background-color: hsl(217, 19%, 35%);
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 20px 25px 20px 25px;
+}
+#share {
+  color: hsl(210, 46%, 95%, 70%);
+  letter-spacing: 4px;
+  margin-right: 15px;
+}
+.links > svg {
+  margin-right: 15px;
+}
+.svg_container.hide {
+  border: none;
+  margin-left: auto;
+  background-color: hsl(214, 17%, 51%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.svg_container.hide svg path {
+  fill: #ffffff;
+}
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    flex-direction: row;
+    width: 55%;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+  }
+  .image_container {
+    display: block;
+    padding: 0;
+    width: max-content;
+    height: max-content;
+
+    border-radius: 10px 0 0 10px;
+    overflow: visible;
+  }
+  img {
+    border-radius: 10px 0 0 10px;
+    aspect-ratio: 309 /247;
+    width: 300px;
+  }
+  .text {
+    flex: 1;
+    justify-content: space-between;
+  }
+  h1 {
+    margin: 25px;
+  }
+  p {
+    margin: 0 25px 25px 25px;
+  }
+  .profile {
+  }
+  .svg_container.show {
+    margin-left: 68%;
+  }
+  .links {
+    position: absolute;
+    right: -6%;
+    border-radius: 10px;
+    bottom: 40%;
+  }
+  .links::after {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: -31%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid hsl(217, 19%, 35%);
+  }
+  .svg_container.hide {
+    display: none;
+  }
+}
